@@ -17,3 +17,21 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+/* For some reason the first child divs would not expand to fill available space with this flex: 1; property  */
+.container > div {
+	flex: 1;
+}
+
+/* This CSS is for Title and Footer*/
+.centering {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.credit {
+	font-size: 0.65rem;
+}
