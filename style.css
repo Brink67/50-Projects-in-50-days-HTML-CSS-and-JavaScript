@@ -7,6 +7,8 @@
 }
 
 body {
+	background-image: linear-gradient(#496de0, #150070);
+	color: #fff;
 	font-family: 'Roboto', 'Open Sans', sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -17,21 +19,63 @@ body {
 	margin: 0;
 	padding: 0;
 }
+a,
+a:visited {
+	color: rgb(252, 229, 126);
+}
 
 /* For some reason the first child divs would not expand to fill available space with this flex: 1; property  */
-.container > div {
+.brink-wrapper > div {
 	flex: 1;
 }
 
 /* This CSS is for Title and Footer*/
-.centering {
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+.brink-wrapper {
 	padding-left: 20px;
 	padding-right: 20px;
 }
 
 .credit {
 	font-size: 0.65rem;
+}
+
+.search {
+	position: relative;
+	height: 50px;
+}
+
+.search .input {
+	background-color: #fff;
+	border: 0;
+	font-size: 18px;
+	padding: 15px;
+	height: 50px;
+	width: 50px;
+	transition: width 0.3s ease;
+}
+
+.btn {
+	background-color: #fff;
+	border: 0;
+	cursor: pointer;
+	font-size: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	transition: transform 0.3s ease;
+}
+
+.btn:focus,
+.input:focus {
+	outline: none;
+}
+
+.search.active .input {
+	width: 200px;
+}
+
+.search.active .btn {
+	transform: translateX(198px);
 }
